@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美赛专栏 - Ulfr1k's Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    
+    <style>
+        :root {
+            --text-color: #333;
+            --white-alpha: rgba(255, 255, 255, 0.8);
+            --accent-color: #555;
+        }
+
+        body, html {
+            margin: 0; padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text-color);
+        }
+
+        #web_bg {
+            position: fixed; width: 100%; height: 100%; z-index: -999;
+            background: url('./img/sunset.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        header {
+            height: 40vh;
+            background: url('./img/kd.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        nav {
+            position: absolute; top: 0; width: 100%; padding: 20px;
+            display: flex; justify-content: space-between; box-sizing: border-box;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .nav-link { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+
+        main {
+            max-width: 900px; margin: -50px auto 40px;
+            padding: 0 20px; position: relative;
+        }
+
+        .content-card {
+            background: var(--white-alpha); padding: 40px;
+            border-radius: 15px; backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h1.page-title { margin-top: 0; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+        
+        .mcm-item {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 20px; margin: 25px 0;
+        }
+
+        .mcm-item h3 { margin: 0 0 10px 0; color: #000; }
+        .mcm-item p { color: #555; line-height: 1.6; }
+        .mcm-item a { color: #3498db; text-decoration: none; font-weight: bold; }
+        .mcm-item a:hover { text-decoration: underline; }
+
+        .back-home {
+            display: inline-block; margin-top: 20px;
+            color: var(--accent-color); text-decoration: none; font-weight: bold;
+        }
+
+        footer { text-align: center; padding: 40px; color: white; }
+    </style>
+</head>
+<body>
+
+    <div id="web_bg"></div>
+
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a class="nav-link" href="index.html">Ulfr1k's Blog</a>
+            </div>
+            <div class="nav-right">
+                <a class="nav-link" href="index.html"><i class="fas fa-home"></i> 主页</a>
+                <a class="nav-link" href="mcm.html"><i class="fas fa-folder-open"></i> 美赛</a>
+            </div>
+        </nav>
+        <h2 style="font-size: 2.5rem;">Mathematical Contest in Modeling</h2>
+    </header>
+
+    <main>
+        <div class="content-card">
+            <h1 class="page-title"><i class="fas fa-layer-group"></i> 美赛备赛笔记</h1>
+            
+            <div class="mcm-item">
+                <h3><i class="fas fa-book"></i> 常用模型算法</h3>
+                <p>AI写的</p>
+            </div>
+
+            <div class="mcm-item">
+                <h3><i class="fas fa-pen-nib"></i> 论文写作规范</h3>
+                <p>AI写的</p>
+            </div>
+
+            <div class="mcm-item">
+                <h3><i class="fas fa-heart"></i> 2026赛后感想</h3>
+                <p>关于今年比赛的点点滴滴与复盘，请点击阅读：<a href="ganxiang.html">2026 美赛感想全文</a></p>
+            </div>
+
+            <div class="mcm-item">
+                <h3><i class="fas fa-link"></i> 资源链接</h3>
+                <p>推荐一个非常全面的美赛资源库：<a href="https://github.com/dick20/MCM-ICM" target="_blank">MCM-ICM GitHub Repository</a></p>
+            </div>
+
+            <a href="index.html" class="back-home"><i class="fas fa-chevron-left"></i> 返回主页</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 By Ulfr1k. "我们在天上的父，愿人都尊你的名为圣。"</p>
+    </footer>
+
+</body>
+</html>

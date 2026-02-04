@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulfr1k's blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    
+    <style>
+        :root {
+            --text-color: #333;
+            --white-alpha: rgba(255, 255, 255, 0.7);
+        }
+
+        body, html {
+            margin: 0; padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text-color);
+        }
+
+        /* 背景图：确保目录下有 img/sunset.jpg */
+        #web_bg {
+            position: fixed; width: 100%; height: 100%; z-index: -999;
+            background: url('./img/sunset.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        /* 顶部封面：确保目录下有 img/kd.jpg */
+        header {
+            height: 100vh;
+            background: url('./img/kd.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        nav {
+            position: absolute; top: 0; width: 100%; padding: 20px;
+            display: flex; justify-content: space-between; box-sizing: border-box;
+        }
+
+        .nav-link { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        .nav-link:hover { border-bottom: 2px solid white; }
+
+        #site-title { font-size: 3.5rem; margin: 0; }
+        #subtitle { font-size: 1.5rem; height: 1.6em; margin-top: 10px; }
+
+        /* 主体布局 */
+        main {
+            max-width: 1100px; margin: 40px auto;
+            display: flex; gap: 20px; padding: 0 20px;
+        }
+
+        /* 文章卡片区 */
+        .recent-posts { flex: 3; }
+        .post-card {
+            background: var(--white-alpha);
+            padding: 25px; border-radius: 12px;
+            margin-bottom: 20px; backdrop-filter: blur(10px);
+            transition: 0.3s;
+        }
+        .post-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.9); }
+        .post-card a { text-decoration: none; color: #333; }
+
+        /* 侧边栏 */
+        .aside-content { flex: 1; }
+        .card-info {
+            background: var(--white-alpha); padding: 20px;
+            border-radius: 12px; text-align: center; backdrop-filter: blur(10px);
+        }
+
+        .avatar {
+            width: 100px; height: 100px; border-radius: 50%;
+            margin-bottom: 10px; border: 3px solid #fff;
+        }
+
+        .follow-btn {
+            display: inline-block; margin-top: 15px;
+            background: #333; color: white; padding: 8px 20px;
+            border-radius: 5px; text-decoration: none;
+        }
+
+        footer { text-align: center; padding: 40px; color: white; }
+
+        @media (max-width: 768px) { main { flex-direction: column; } }
+    </style>
+</head>
+<body>
+
+    <div id="web_bg"></div>
+
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a class="nav-link" href="index.html">Ulfr1k's Blog</a>
+            </div>
+            <div class="nav-right">
+                <a class="nav-link" href="index.html"><i class="fas fa-home"></i> 主页</a>
+                <a class="nav-link" href="mcm.html"><i class="fas fa-folder-open"></i> 美赛</a>
+            </div>
+        </nav>
+        <h1 id="site-title">Ulfr1k's Blog</h1>
+        <div id="subtitle"></div>
+    </header>
+
+    <main>
+        <div class="recent-posts">
+            <div class="post-card">
+                <a href="mcm.html">
+                    <h2><i class="fas fa-file-alt"></i> 2026美赛准备笔记与资源汇总</h2>
+                    <p style="color: #666; font-size: 0.9rem;">
+                        <i class="far fa-calendar-alt"></i> 2026-02-05 | 
+                        <i class="fas fa-inbox"></i> 美赛专栏
+                    </p>
+                    <p>点击进入美赛专栏，查看历年 O 奖论文、常用模型算法模板及备赛进度记录...</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="aside-content">
+            <div class="card-info">
+                <img src="./img/lf.jpg" class="avatar" alt="Avatar">
+                <div style="font-weight: bold; font-size: 1.2rem;">Ulfr1k</div>
+                <div style="margin: 10px 0; font-size: 0.9rem; color: #555;">专注于数学建模与技术分享</div>
+                <div style="display: flex; justify-content: space-around; margin: 15px 0;">
+                    <div><div style="font-weight: bold;">1</div><div style="font-size: 0.8rem;">文章</div></div>
+                    <div><div style="font-weight: bold;">1</div><div style="font-size: 0.8rem;">分类</div></div>
+                </div>
+                <a href="https://github.com/ulfr1k" class="follow-btn">
+                    <i class="fab fa-github"></i> Follow Me
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 By Ulfr1k. Powered by GitHub Pages.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js"></script>
+    <script>
+        var typed = new Typed('#subtitle', {
+            strings: ["我们在天上的父，愿人都尊你的名为圣。"],
+            typeSpeed: 100,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
+</body>
+</html>

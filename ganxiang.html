@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 美赛感想 - Ulfr1k's Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <style>
+        :root {
+            --text-color: #333;
+            --white-alpha: rgba(255, 255, 255, 0.85);
+            --accent-color: #2c3e50;
+        }
+
+        body, html {
+            margin: 0; padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.8; color: var(--text-color);
+        }
+
+        #web_bg {
+            position: fixed; width: 100%; height: 100%; z-index: -999;
+            background: url('./img/sunset.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        header {
+            height: 30vh;
+            background: url('./img/kd.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex; justify-content: center; align-items: center;
+            color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        nav {
+            position: absolute; top: 0; width: 100%; padding: 20px;
+            display: flex; justify-content: space-between; box-sizing: border-box;
+            background: rgba(0,0,0,0.1);
+        }
+
+        .nav-link { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+
+        main {
+            max-width: 800px; margin: -40px auto 50px;
+            padding: 0 20px; position: relative;
+        }
+
+        .article-card {
+            background: var(--white-alpha); padding: 50px;
+            border-radius: 15px; backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h1 { font-size: 2rem; border-bottom: 2px solid #eee; padding-bottom: 15px; margin-bottom: 30px; }
+        h2 { color: var(--accent-color); margin-top: 30px; border-left: 5px solid var(--accent-color); padding-left: 15px; }
+        
+        .meta-info { color: #888; font-size: 0.9rem; margin-bottom: 20px; }
+        .quote { font-style: italic; color: #555; background: #f9f9f9; padding: 15px; border-radius: 5px; margin: 20px 0; border: 1px solid #eee; }
+        
+        .highlight { color: #e74c3c; font-weight: bold; }
+
+        .btn-group { margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; }
+        .back-btn { color: var(--accent-color); text-decoration: none; font-weight: bold; }
+
+        footer { text-align: center; padding: 30px; color: white; }
+    </style>
+</head>
+<body>
+
+    <div id="web_bg"></div>
+
+    <header>
+        <nav>
+            <div class="nav-left"><a class="nav-link" href="index.html">Ulfr1k's Blog</a></div>
+            <div class="nav-right">
+                <a class="nav-link" href="index.html">主页</a>
+                <a class="nav-link" href="mcm.html">美赛</a>
+            </div>
+        </nav>
+        <h1>Post-MCM Reflection</h1>
+    </header>
+
+    <main>
+        <article class="article-card">
+            <h1>初次美赛：从“草台班子”到惊险完赛</h1>
+            <div class="meta-info">
+                <i class="far fa-calendar-alt"></i> 发表于 2026-02-05 | <i class="fas fa-user-edit"></i> Ulfr1k
+            </div>
+
+            <p>这是我第一次参加美赛（MCM/ICM）。回看这四天三夜，真是一场充满了意外、惊险与妥协的征程。</p>
+
+            <div class="quote">
+                “虽然提前有所准备但不多，三个人也蛮草台班子的。”
+            </div>
+
+            <h2>1. AI：最强助攻</h2>
+            <p>不得不感叹科技的力量。得益于 AI 的协助，我们的进度出奇地快。在完赛前一天多，我们的完成度就已经达到了 <span class="highlight">95% 以上</span>。这给了我们充足（虽然最后证明并不充足）的时间来打磨细节。</p>
+
+            <h2>2. LaTeX：最后的噩梦</h2>
+            <p>如果说答辩模型是骆驼，LaTeX 就是那压垮骆驼的最后一根稻草。LaTeX 的抽象程度远超想象，编译时的报错和警告层出不穷。尤其是图片位置的调试，简直令人崩溃：稍微换一下位置，页数就超标；稍微调一下大小，排版就错乱。</p>
+
+            <h2>3. 惊险的“我已急哭”</h2>
+            <p>最惊险的一幕发生在封稿前。我们原本的页边距是 1 倍，行距 1.5，写完后发现洋洋洒洒整了 28 页。面对 25 页的限制，我们差点被吓哭：</p>
+            <ul>
+                <li>页边距：1.0 ——> 0.75</li>
+                <li>行距：1.5 ——> 1.0</li>
+            </ul>
+            <p>最后看着勉强塞进 25 页的 PDF，感觉自己也要被塞满了。</p>
+
+            <h2>4. 成果展示</h2>
+            <p>虽然过程跌跌撞撞，但最终做出的东西我们认为还算可以。所有的努力都凝聚成了这篇 Problem C 的 Solution。</p>
+            <p><a href="https://github.com/Ulfr1k/MCM-2026-Problem-C-Solution/blob/main/2601356.pdf" target="_blank" style="color:#3498db; font-weight:bold;">
+                <i class="fas fa-file-pdf"></i> 查看我们的最终论文 PDF (2601356)
+            </a></p>
+
+            <div class="btn-group">
+                <a href="mcm.html" class="back-btn"><i class="fas fa-chevron-left"></i> 返回美赛专栏</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 By Ulfr1k. "我们在天上的父，愿人都尊你的名为圣。"</p>
+    </footer>
+
+</body>
+</html>
