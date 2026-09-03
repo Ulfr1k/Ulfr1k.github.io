@@ -1,0 +1,9 @@
+{
+  "name": "ulfr1k-blog",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Ulfr1k's personal blog — static site, zero build step",
+  "scripts": {
+    "dev": "node server.js"
+  }
+}

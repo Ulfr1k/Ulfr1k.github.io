@@ -3,125 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026 美赛感想 - Ulfr1k's Blog</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
-    <style>
-        :root {
-            --text-color: #333;
-            --white-alpha: rgba(255, 255, 255, 0.85);
-            --accent-color: #2c3e50;
-        }
+    <title>初次美赛：从&ldquo;草台班子&rdquo;到惊险完赛 — Ulfr1k's Blog</title>
+    <meta name="description" content="2026 美赛赛后复盘：四天三夜的意外、惊险与妥协——AI 助攻、LaTeX 噩梦与 25 页惊魂。">
+    <link rel="canonical" href="https://ulfr1k.github.io/ganxiang.html">
+    <meta name="theme-color" content="#16122b">
+    <meta name="author" content="Ulfr1k">
 
-        body, html {
-            margin: 0; padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.8; color: var(--text-color);
-        }
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Ulfr1k's Blog">
+    <meta property="og:title" content="初次美赛：从&ldquo;草台班子&rdquo;到惊险完赛">
+    <meta property="og:description" content="2026 美赛赛后复盘：AI 助攻、LaTeX 噩梦与 25 页惊魂。">
+    <meta property="og:url" content="https://ulfr1k.github.io/ganxiang.html">
+    <meta property="og:image" content="https://ulfr1k.github.io/img/kd.jpg">
+    <meta property="og:locale" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
 
-        #web_bg {
-            position: fixed; width: 100%; height: 100%; z-index: -999;
-            background: url('./img/sunset.jpg') no-repeat center center;
-            background-size: cover;
-        }
+    <link rel="icon" href="./img/favicon.ico" sizes="any">
+    <link rel="preload" as="image" href="./img/kd.jpg">
 
-        header {
-            height: 30vh;
-            background: url('./img/kd.jpg') no-repeat center center;
-            background-size: cover;
-            display: flex; justify-content: center; align-items: center;
-            color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&display=swap">
 
-        nav {
-            position: absolute; top: 0; width: 100%; padding: 20px;
-            display: flex; justify-content: space-between; box-sizing: border-box;
-            background: rgba(0,0,0,0.1);
-        }
-
-        .nav-link { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
-
-        main {
-            max-width: 800px; margin: -40px auto 50px;
-            padding: 0 20px; position: relative;
-        }
-
-        .article-card {
-            background: var(--white-alpha); padding: 50px;
-            border-radius: 15px; backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        h1 { font-size: 2rem; border-bottom: 2px solid #eee; padding-bottom: 15px; margin-bottom: 30px; }
-        h2 { color: var(--accent-color); margin-top: 30px; border-left: 5px solid var(--accent-color); padding-left: 15px; }
-        
-        .meta-info { color: #888; font-size: 0.9rem; margin-bottom: 20px; }
-        .quote { font-style: italic; color: #555; background: #f9f9f9; padding: 15px; border-radius: 5px; margin: 20px 0; border: 1px solid #eee; }
-        
-        .highlight { color: #e74c3c; font-weight: bold; }
-
-        .btn-group { margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; }
-        .back-btn { color: var(--accent-color); text-decoration: none; font-weight: bold; }
-
-        footer { text-align: center; padding: 30px; color: white; }
-    </style>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
 
-    <div id="web_bg"></div>
+    <nav class="site-nav" aria-label="主导航">
+        <a class="nav-brand" href="index.html">Ulfr1k&rsquo;s Blog</a>
+        <div class="nav-links">
+            <a href="index.html">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/></svg>
+                <span>主页</span>
+            </a>
+            <a href="mcm.html">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                <span>美赛</span>
+            </a>
+        </div>
+    </nav>
 
-    <header>
-        <nav>
-            <div class="nav-left"><a class="nav-link" href="index.html">Ulfr1k's Blog</a></div>
-            <div class="nav-right">
-                <a class="nav-link" href="index.html">主页</a>
-                <a class="nav-link" href="mcm.html">美赛</a>
-            </div>
-        </nav>
-        <h1>Post-MCM Reflection</h1>
+    <header class="hero hero--compact">
+        <h1 class="hero-title" style="font-size: clamp(1.9rem, 5.5vw, 3.4rem);">Post-MCM <em>Reflection</em></h1>
+        <hr class="horizon-rule">
     </header>
 
-    <main>
-        <article class="article-card">
-            <h1>初次美赛：从“草台班子”到惊险完赛</h1>
-            <div class="meta-info">
-                <i class="far fa-calendar-alt"></i> 发表于 2026-02-05 | <i class="fas fa-user-edit"></i> Ulfr1k
-            </div>
+    <main id="main" class="page-body">
+        <div class="container container--reading">
+            <article class="article-card">
+                <h1 class="article-title">初次美赛：从&ldquo;草台班子&rdquo;到惊险完赛</h1>
+                <div class="article-meta">
+                    <span>发表于 2026-02-05</span>
+                    <span>作者 Ulfr1k</span>
+                    <span>赛后复盘</span>
+                </div>
 
-            <p>这是我第一次参加美赛（MCM/ICM）。回看这四天三夜，真是一场充满了意外、惊险与妥协的征程。</p>
+                <p>这是我第一次参加美赛（MCM/ICM）。回看这四天三夜，真是一场充满了意外、惊险与妥协的征程。</p>
 
-            <div class="quote">
-                “虽然提前有所准备但不多，三个人也蛮草台班子的。”
-            </div>
+                <div class="quote">
+                    &ldquo;虽然提前有所准备但不多，三个人也蛮草台班子的。&rdquo;
+                </div>
 
-            <h2>1. AI：最强助攻</h2>
-            <p>不得不感叹科技的力量。得益于 AI 的协助，我们的进度出奇地快。在完赛前一天多，我们的完成度就已经达到了 <span class="highlight">95% 以上</span>。这给了我们充足（虽然最后证明并不充足）的时间来打磨细节。</p>
+                <h2>1. AI：最强助攻</h2>
+                <p>不得不感叹科技的力量。得益于 AI 的协助，我们的进度出奇地快。在完赛前一天多，我们的完成度就已经达到了 <span class="highlight">95% 以上</span>。这给了我们充足（虽然最后证明并不充足）的时间来打磨细节。</p>
 
-            <h2>2. LaTeX：最后的噩梦</h2>
-            <p>如果说答辩模型是骆驼，LaTeX 就是那压垮骆驼的最后一根稻草。LaTeX 的抽象程度远超想象，编译时的报错和警告层出不穷。尤其是图片位置的调试，简直令人崩溃：稍微换一下位置，页数就超标；稍微调一下大小，排版就错乱。</p>
+                <h2>2. LaTeX：最后的噩梦</h2>
+                <p>如果说答辩模型是骆驼，LaTeX 就是那压垮骆驼的最后一根稻草。LaTeX 的抽象程度远超想象，编译时的报错和警告层出不穷。尤其是图片位置的调试，简直令人崩溃：稍微换一下位置，页数就超标；稍微调一下大小，排版就错乱。</p>
 
-            <h2>3. 惊险的“我已急哭”</h2>
-            <p>最惊险的一幕发生在封稿前。我们原本的页边距是 1 倍，行距 1.5，写完后发现洋洋洒洒整了 28 页。面对 25 页的限制，我们差点被吓哭：</p>
-            <ul>
-                <li>页边距：1.0 ——> 0.75</li>
-                <li>行距：1.5 ——> 1.0</li>
-            </ul>
-            <p>最后看着勉强塞进 25 页的 PDF，感觉自己也要被塞满了。</p>
+                <h2>3. 惊险的&ldquo;我已急哭&rdquo;</h2>
+                <p>最惊险的一幕发生在封稿前。我们原本的页边距是 1 倍，行距 1.5，写完后发现洋洋洒洒整了 28 页。面对 25 页的限制，我们差点被吓哭：</p>
+                <ul>
+                    <li>页边距：1.0 ——&gt; 0.75</li>
+                    <li>行距：1.5 ——&gt; 1.0</li>
+                </ul>
+                <p>最后看着勉强塞进 25 页的 PDF，感觉自己也要被塞满了。</p>
 
-            <h2>4. 成果展示</h2>
-            <p>虽然过程跌跌撞撞，但最终做出的东西我们认为还算可以。所有的努力都凝聚成了这篇 Problem C 的 Solution。</p>
-            <p><a href="https://github.com/Ulfr1k/MCM-2026-Problem-C-Solution/blob/main/2601356.pdf" target="_blank" style="color:#3498db; font-weight:bold;">
-                <i class="fas fa-file-pdf"></i> 查看我们的最终论文 PDF (2601356)
-            </a></p>
+                <h2>4. 成果展示</h2>
+                <p>虽然过程跌跌撞撞，但最终做出的东西我们认为还算可以。所有的努力都凝聚成了这篇 Problem C 的 Solution。</p>
+                <p>
+                    <a class="pdf-link" href="https://github.com/Ulfr1k/MCM-2026-Problem-C-Solution/blob/main/2601356.pdf" target="_blank" rel="noopener noreferrer">
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                        查看我们的最终论文 PDF (2601356)
+                    </a>
+                </p>
 
-            <div class="btn-group">
-                <a href="mcm.html" class="back-btn"><i class="fas fa-chevron-left"></i> 返回美赛专栏</a>
-            </div>
-        </article>
+                <div class="article-footer">
+                    <a href="mcm.html" class="back-link">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12H4"/><path d="m10 18-6-6 6-6"/></svg>
+                        返回美赛专栏
+                    </a>
+                </div>
+            </article>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2026 By Ulfr1k. "我们在天上的父，愿人都尊你的名为圣。"</p>
+    <footer class="site-footer">
+        <hr class="horizon-rule">
+        <p class="verse">&ldquo;我们在天上的父，愿人都尊你的名为圣。&rdquo;</p>
+        <p>&copy; <span data-year>2026</span> By Ulfr1k · Powered by GitHub Pages</p>
     </footer>
 
+    <script src="./js/main.js" defer></script>
 </body>
 </html>
